@@ -1,3 +1,15 @@
+# For Ray, going through all the vapi models and getting a list of models 
+# related (through foreign keys or join tables)
+
+# Run through a rails console:
+#   $: cd ~/vinspired/vapi
+#   $: rails c
+#   pry> load '../script/view_relationships.rb'
+#   pry> find_all_models
+
+# Output:
+#   + writes to a csv file: ~/vinspired/vapi/model_relations.csv
+
 require "csv"
 
 def find_all_models
